@@ -1,7 +1,7 @@
 {
 	"name": "beer-necessities",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "./server/index.js",
 	"engines": {
 		"node": "12.13.1",
 		"yarn": "1.22.0"
@@ -13,6 +13,7 @@
 	"author": "Lukas Stuart-Fry <lstuartfry@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
+		"axios": "^0.19.2",
 		"express": "^4.17.1",
 		"nodemon": "^2.0.2"
 	}

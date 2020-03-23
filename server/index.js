@@ -1,10 +1,13 @@
+// initialize our express application
 const express = require('express');
-
-const keys = require('./config/keys');
 const app = express();
-
-app.get('/', (req, res) => {
-	res.send({ test: 'json' });
-});
 const PORT = process.env.PORT || 5000;
-app.listen(PORT);
+app.listen(PORT, () => {
+	console.log(`Listening on port ${PORT}`);
+});
+
+// serve our index.html file, located in our /client/public folder
+app.use(express.static('./client/public'));
+
+// expose our express application to our APIs
+require('./api/youtube')(app);
