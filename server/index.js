@@ -6,8 +6,8 @@ app.listen(PORT, () => {
 	console.log(`Listening on port ${PORT}`);
 });
 
-// serve our index.html file, located in our /client/public folder
-app.use(express.static('./client/public'));
+// serve our index.html file, located in our ../client/public folder
+app.use(express.static('../client/public'));
 
 // expose our express application to our APIs
 require('./api/youtube')(app);

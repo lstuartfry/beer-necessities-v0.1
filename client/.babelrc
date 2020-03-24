@@ -1,4 +1,9 @@
+// babel-plugin-styled-components - https://styled-components.com/docs/tooling#babel-plugin
+
 {
-	"plugins": ["react-hot-loader/babel"],
+	"plugins": [
+		["babel-plugin-styled-components", { "pure": true, "ssr": false }],
+		"react-hot-loader/babel"
+	],
 	"presets": ["@babel/env", "@babel/react"]
 }
