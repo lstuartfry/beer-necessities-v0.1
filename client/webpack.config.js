@@ -30,6 +30,7 @@ module.exports = {
 	},
 	resolve: {
 		extensions: ['*', '.js', '.jsx'],
+		modules: ['node_modules', '.'],
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist/'),
@@ -39,6 +40,9 @@ module.exports = {
 	devServer: {
 		contentBase: path.join(__dirname, 'public/'),
 		port: 3000,
+		proxy: {
+			'/youtube': 'http://localhost:5000',
+		},
 		publicPath: 'http://localhost:3000/dist/',
 		hotOnly: true,
 	},

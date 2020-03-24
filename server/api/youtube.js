@@ -20,6 +20,8 @@ const youtubeAPI = axios.create({
 
 module.exports = app => {
 	app.get('/youtube', async (req, res) => {
+		console.log('youtube API hit!');
+		console.log('req in node is : ', req);
 		try {
 			const response = await youtubeAPI.get('/search', {
 				params: {
@@ -27,7 +29,8 @@ module.exports = app => {
 					q: 'surfing',
 				},
 			});
-			res.send(response.data);
+			console.log('response in node is : ', response);
+			// res.send(response.data);
 		} catch (error) {
 			console.log('error in youtubeAPI is : ', error);
 		}

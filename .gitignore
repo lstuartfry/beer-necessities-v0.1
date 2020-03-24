@@ -1,3 +1,4 @@
 node_modules
 
+client/public/beer_bear.png
 server/config/dev.js
