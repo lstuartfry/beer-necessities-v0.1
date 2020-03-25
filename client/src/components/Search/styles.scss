@@ -1,0 +1,26 @@
+.search {
+	display: flex;
+	// justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.image {
+	align-items: center;
+	display: flex;
+	justify-content: end;
+	max-width: 30%;
+	// overflow: hidden;
+	img {
+		max-width: 75%;
+		// min-height: 100%;
+	}
+}
+
+.form {
+	padding-left: 30px;
+}
+
+.input {
+	min-width: 500px;
+}

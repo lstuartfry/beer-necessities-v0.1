@@ -10,7 +10,7 @@ const propTypes = {
 const TopNavigation = props => (
 	<div className={styles.topNavigation}>
 		<i className={`${styles.icon} far fa-beer`} />
-		{props.children}
+		<div className={styles.content}>{props.children}</div>
 	</div>
 );
 
