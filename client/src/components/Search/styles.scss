@@ -21,14 +21,23 @@
 }
 
 .form {
-	padding-left: 30px;
+	display: flex;
 }
 
 .input {
 	min-width: 500px;
 }
 
+.inputWrapper {
+	margin-right: $large;
+}
+
 .searchIcon {
 	font-size: 16px;
+	padding-right: $small;
+}
+
+.buttonIcon {
+	font-size: 20px;
 	padding-right: $small;
 }

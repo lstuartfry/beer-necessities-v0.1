@@ -1,5 +1,20 @@
+// base styles
 $chestnut: #b16728;
 $darkBrown: #863710;
 $darkGray: #302f35;
 $lightBlue: #e9f2f7;
 $tan: #e1cfa9;
+$yellow: #fde48a;
+
+// hover styles
+$yellowHover: darken($yellow, 10%);
+
+:export {
+	chestnut: $chestnut;
+	darkBrown: $darkBrown;
+	darkGray: $darkGray;
+	lightBlue: $lightBlue;
+	tan: $tan;
+	yellow: $yellow;
+	yellowHover: $yellowHover;
+}

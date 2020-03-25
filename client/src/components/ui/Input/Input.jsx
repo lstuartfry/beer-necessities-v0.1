@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { func, string } from 'prop-types';
 import styled from 'styled-components';
 
+import colors from 'styles/_colors';
+
 const propTypes = {
 	onChange: func.isRequired,
 	placeholder: string,
@@ -17,7 +19,7 @@ const StyledInputWrapper = styled.div`
 	background: white;
 	border-radius: 8px;
 	box-shadow: ${props =>
-		props.focus ? '0 0 0 2px #863710' : '0 0 0 1px #6b7177'};
+		props.focus ? `0 0 0 2px ${colors.darkBrown}` : '0 0 0 1px #6b7177'};
 	padding: 16px;
 	width: 100%;
 `;
@@ -27,12 +29,12 @@ const StyledInput = styled.input`
 	border: none;
 	font-size: 15px;
 	::placeholder {
-		color: rgba(0, 0, 0, 0.7);
+		color: #6b7177;
 		font-style: italic;
 	}
 `;
 
-const Input = ({ children, ...rest }) => {
+const Input = ({ children, wrapperClassName, ...rest }) => {
 	const [focus, setFocus] = useState(false);
 	const [inputFocus, setInputFocus] = useState(false);
 
@@ -54,9 +56,11 @@ const Input = ({ children, ...rest }) => {
 
 	return (
 		<StyledInputWrapper
+			className={wrapperClassName}
 			focus={focus || inputFocus}
 			onMouseOver={onFocus}
-			onMouseOut={onBlur}>
+			onMouseOut={onBlur}
+		>
 			{children}
 			<StyledInput
 				{...rest}

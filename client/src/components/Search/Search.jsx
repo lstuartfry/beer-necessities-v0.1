@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+import Button from 'ui/Button/Button';
 import Input from 'ui/Input/Input';
 import styles from './styles.scss';
 
@@ -14,19 +15,21 @@ const Search = () => {
 	};
 	return (
 		<div className={styles.search}>
-			<div className={styles.form}>
-				<form onSubmit={onSubmit}>
-					<Input
-						className={styles.input}
-						onChange={onChange}
-						value={value}
-						placeholder="Enter the name of a beer or brewery"
-					>
-						<i className={`${styles.searchIcon} far fa-search`} />
-					</Input>
-					<button>Cheers!</button>
-				</form>
-			</div>
+			<form className={styles.form} onSubmit={onSubmit}>
+				<Input
+					className={styles.input}
+					wrapperClassName={styles.inputWrapper}
+					onChange={onChange}
+					value={value}
+					placeholder="Enter the name of a beer or brewery"
+				>
+					<i className={`${styles.searchIcon} far fa-search`} />
+				</Input>
+				<Button>
+					{/* <i className={`${styles.buttonIcon} far fa-beer`} /> */}
+					Cheers!
+				</Button>
+			</form>
 		</div>
 	);
 };
