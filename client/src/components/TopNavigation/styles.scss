@@ -13,10 +13,15 @@
 	-webkit-text-stroke: 1px $darkGray;
 }
 
-.icon {
-	padding-right: $small;
+.imageContainer {
+	display: flex;
+	width: 50px;
+	img {
+		min-width: 100%;
+		pointer-events: none;
+	}
 }
 
 .content {
-	padding-bottom: 4px;
+	padding: 0px 0px $small $small;
 }

@@ -1,11 +1,13 @@
+@import 'styles/_spacing';
+
 .search {
 	display: flex;
-	// justify-content: center;
+	justify-content: center;
 	align-items: center;
 	height: 100%;
 }
 
-.image {
+.imageContainer {
 	align-items: center;
 	display: flex;
 	justify-content: end;
@@ -13,6 +15,7 @@
 	// overflow: hidden;
 	img {
 		max-width: 75%;
+		pointer-events: none;
 		// min-height: 100%;
 	}
 }
@@ -23,4 +26,9 @@
 
 .input {
 	min-width: 500px;
+}
+
+.searchIcon {
+	font-size: 16px;
+	padding-right: $small;
 }

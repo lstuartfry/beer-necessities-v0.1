@@ -9,7 +9,9 @@ const propTypes = {
 
 const TopNavigation = props => (
 	<div className={styles.topNavigation}>
-		<i className={`${styles.icon} far fa-beer`} />
+		<div className={styles.imageContainer}>
+			<img src="beer_bear.png" />
+		</div>
 		<div className={styles.content}>{props.children}</div>
 	</div>
 );

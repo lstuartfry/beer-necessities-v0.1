@@ -14,17 +14,16 @@ const Search = () => {
 	};
 	return (
 		<div className={styles.search}>
-			<div className={styles.image}>
-				<img src="beer_bear.png" />
-			</div>
 			<div className={styles.form}>
 				<form onSubmit={onSubmit}>
 					<Input
 						className={styles.input}
-						value={value}
 						onChange={onChange}
+						value={value}
 						placeholder="Enter the name of a beer or brewery"
-					/>
+					>
+						<i className={`${styles.searchIcon} far fa-search`} />
+					</Input>
 					<button>Cheers!</button>
 				</form>
 			</div>
