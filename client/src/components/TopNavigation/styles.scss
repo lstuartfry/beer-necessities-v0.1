@@ -1,0 +1,18 @@
+@import 'styles/_colors';
+@import 'styles/_spacing';
+
+.topNavigation {
+	align-items: center;
+	background-color: $darkBrown;
+	display: flex;
+	color: white;
+	font-size: 36px;
+	min-height: 75px;
+	padding: 0px $medium;
+	text-shadow: 2px 2px $darkGray;
+	-webkit-text-stroke: 1px $darkGray;
+}
+
+.icon {
+	padding-right: $small;
+}

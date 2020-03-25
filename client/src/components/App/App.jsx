@@ -4,11 +4,10 @@ import React from 'react';
 import TopNavigation from '../TopNavigation/TopNavigation';
 import MainContent from '../MainContent/MainContent';
 
-import styles from './styles.css';
-import theme from '../../styles/theme';
+import styles from './styles.scss';
 
 const App = () => (
-	<div className={styles.app} style={{ backgroundColor: theme.lightBlue }}>
+	<div className={styles.app}>
 		<TopNavigation>Beer Necessities</TopNavigation>
 		<MainContent />
 	</div>

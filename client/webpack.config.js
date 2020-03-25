@@ -1,5 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+// TO DO - PRODUCTION
+// https://developerhandbook.com/webpack/how-to-configure-scss-modules-for-webpack/
 
 module.exports = {
 	entry: './src/index.js',
@@ -26,10 +30,23 @@ module.exports = {
 					},
 				],
 			},
+			{
+				test: /\.s[ac]ss$/i,
+				use: [
+					'style-loader',
+					{
+						loader: 'css-loader',
+						options: {
+							modules: true,
+						},
+					},
+					'sass-loader',
+				],
+			},
 		],
 	},
 	resolve: {
-		extensions: ['*', '.js', '.jsx'],
+		extensions: ['*', '.js', '.jsx', '.scss'],
 		modules: ['node_modules', '.'],
 	},
 	output: {
@@ -46,5 +63,11 @@ module.exports = {
 		publicPath: 'http://localhost:3000/dist/',
 		hotOnly: true,
 	},
-	plugins: [new webpack.HotModuleReplacementPlugin()],
+	plugins: [
+		new webpack.HotModuleReplacementPlugin(),
+		// new MiniCssExtractPlugin({
+		// 	filename: isDevelopment ? '[name].css' : '[name].[hash].css',
+		// 	chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css',
+		// }),
+	],
 };
