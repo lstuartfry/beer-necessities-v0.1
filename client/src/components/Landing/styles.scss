@@ -1,0 +1,40 @@
+@import 'styles/_colors';
+@import 'styles/_spacing';
+
+.landing {
+	display: flex;
+	flex-direction: column;
+	margin-top: 60px;
+	text-align: center;
+}
+
+.logo {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.imageContainer {
+	display: flex;
+	width: 35px;
+	img {
+		min-width: 100%;
+		pointer-events: none;
+	}
+}
+
+.textContainer {
+	color: $darkGray;
+	font-size: 25px;
+	margin-left: $medium;
+	// text-shadow: 2px 2px $darkGray;
+	// -webkit-text-stroke: 1px $darkGray;
+}
+
+.header {
+	margin-top: $large;
+}
+
+.subHeader {
+	margin-bottom: $xlarge;
+}

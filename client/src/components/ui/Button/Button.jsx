@@ -1,14 +1,16 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { number, string } from 'prop-types';
 import styled from 'styled-components';
 
 import colors from 'styles/_colors';
 
 const propTypes = {
+	fontSize: number,
 	variety: string,
 };
 
 const defaultProps = {
+	fontSize: 16,
 	variety: 'primary',
 };
 
@@ -31,10 +33,13 @@ const StyledButton = styled.button`
   border-top-width: 1px;
   border-bottom-width: 3px;
 	border-radius: 4px;
+  color: ${colors.darkGray};
 	display: flex;
-	font-size: 16px;
+  font-family: inherit;
+	font-size: ${props => props.fontSize}px; 
 	font-weight: bold;
 	padding: 12px 20px;
+  white-space: nowrap;
 	&:hover {
 		cursor: pointer;
 		background-color: ${props => colorVarieties[props.variety].hover};

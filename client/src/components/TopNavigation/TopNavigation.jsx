@@ -1,7 +1,7 @@
 import React from 'react';
 import { node, oneOfType, string } from 'prop-types';
 
-import styles from './styles.scss';
+import styles from './styles';
 
 const propTypes = {
 	children: oneOfType([node, string]).isRequired,

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import Button from 'ui/Button/Button';
 import Input from 'ui/Input/Input';
-import styles from './styles.scss';
+import styles from './styles';
 
 const Search = () => {
 	const [value, setValue] = useState('');
@@ -21,14 +21,11 @@ const Search = () => {
 					wrapperClassName={styles.inputWrapper}
 					onChange={onChange}
 					value={value}
-					placeholder="Enter the name of a beer or brewery"
+					placeholder="Enter a search term"
 				>
 					<i className={`${styles.searchIcon} far fa-search`} />
 				</Input>
-				<Button>
-					{/* <i className={`${styles.buttonIcon} far fa-beer`} /> */}
-					Cheers!
-				</Button>
+				<Button fontSize={22}>Beer me!</Button>
 			</form>
 		</div>
 	);
