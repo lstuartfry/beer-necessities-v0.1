@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
+import API from 'api';
 import Button from 'ui/Button/Button';
 import Input from 'ui/Input/Input';
 import styles from './styles';
@@ -10,7 +10,7 @@ const Search = () => {
 	const onChange = e => setValue(e.target.value);
 	const onSubmit = async e => {
 		e.preventDefault();
-		const response = await axios.get('/youtube', value);
+		const response = await API.post('/youtube', { query: value });
 		console.log('response in react is : ', response);
 	};
 	return (
