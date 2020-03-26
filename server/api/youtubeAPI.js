@@ -10,7 +10,7 @@ const keys = require('../config/keys');
 const defaultParams = {
 	key: keys.YOUTUBE_API_KEY,
 	part: 'snippet',
-	maxResults: 5,
+	maxResults: 20,
 	type: 'video',
 };
 
@@ -18,21 +18,7 @@ const youtubeAPI = axios.create({
 	baseURL: keys.YOUTUBE_BASE_URL,
 });
 
-module.exports = app => {
-	app.get('/youtube', async (req, res) => {
-		console.log('youtube API hit!');
-		console.log('req in node is : ', req);
-		try {
-			const response = await youtubeAPI.get('/search', {
-				params: {
-					...defaultParams,
-					q: 'surfing',
-				},
-			});
-			console.log('response in node is : ', response);
-			// res.send(response.data);
-		} catch (error) {
-			console.log('error in youtubeAPI is : ', error);
-		}
-	});
+module.exports = {
+	youtubeAPI,
+	defaultParams,
 };

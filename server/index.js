@@ -9,5 +9,5 @@ app.listen(PORT, () => {
 // serve our index.html file, located in our ../client/public folder
 app.use(express.static('../client/public'));
 
-// expose our express application to our APIs
-require('./api/youtube')(app);
+// expose our express application to our API routes
+require('./routes/youtubeRoutes')(app);
