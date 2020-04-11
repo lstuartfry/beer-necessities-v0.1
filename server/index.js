@@ -7,7 +7,7 @@ app.listen(PORT, () => {
 	console.log(`Listening on port ${PORT}`);
 });
 
-app.use(express.static('../client/public')); // serve our index.html file, located in our ../client/public folder
+app.use(express.static('./client/public')); // serve our index.html file, located in our ./client/public folder
 
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded()); // Parse URL-encoded bodies
