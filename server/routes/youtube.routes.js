@@ -14,7 +14,7 @@ router.post('/', async (req, res) => {
 		});
 		res.send(response.data);
 	} catch (error) {
-		console.log('error in youtubeAPI is : ', error);
+		console.log('error in youtube router is : ', error);
 	}
 });
 
